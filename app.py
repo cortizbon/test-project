@@ -20,3 +20,9 @@ fig.tight_layout()
 
 st.pyplot(fig)
 
+if st.button("Clic aquí"):
+    fig, ax = plt.subplots(1, 2)
+    ax[0].hist(df['col3'])
+    ax[1].scatter(df['col1'], df['col4'])
+    st.pyplot(fig)
+
