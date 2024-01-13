@@ -12,11 +12,11 @@ data = np.random.normal(0, 1, size=(1000, 4))
 df = pd.DataFrame(data=data,
                   columns=['col1', 'col2', 'col3', 'col4'])
 
-fig, ax = plt.subplots(1, 3, figsize=(6, 6))
+fig, ax = plt.subplots(1, 3, figsize=(2, 6))
 
-ax[0].hist(df['col1'])
-ax[1].scatter(df['col1'], df['col2'])
-ax[2].hist(df['col3'])
+ax[0].hist(df['col1'], color='orange')
+ax[1].scatter(df['col1'], df['col2'], color='red')
+ax[2].hist(df['col3'], color='darkred')
 
 fig.tight_layout()
 
@@ -24,7 +24,7 @@ st.pyplot(fig)
 
 if st.button("Clic aquí"):
     fig, ax = plt.subplots(1, 2)
-    ax[0].hist(df['col3'])
+    ax[0].hist(df['col3'], bins=50)
     ax[1].scatter(df['col1'], df['col4'])
     st.pyplot(fig)
 
