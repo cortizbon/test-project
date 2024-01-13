@@ -20,7 +20,7 @@ df = pd.DataFrame(
 fig, ax = plt.subplots(1, 3, figsize=(6, 2))
 
 ax[0].hist(df["col1"], color="orange")
-ax[1].scatter(df["col1"], df["col2"], color="red")
+ax[1].scatter(df["col1"], df["col2"], color="red", s=6)
 ax[2].hist(df["col3"], color="darkred")
 
 fig.tight_layout()
@@ -30,5 +30,5 @@ st.pyplot(fig)
 if st.button("Clic aquí"):
     fig, ax = plt.subplots(1, 2, figsize=(4, 2))
     ax[0].hist(df["col3"], bins=50)
-    ax[1].scatter(df["col1"], df["col4"])
+    ax[1].scatter(df["col1"], df["col4"], s=6)
     st.pyplot(fig)
